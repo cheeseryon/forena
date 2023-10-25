@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url(font.css); 
+@font-face{font-family:Baskvl; src:url(../font/baskvl.ttf) format(woff);}
+
+@media screen and (min-width:801px) and (max-width:1250px) {
+.mobileOn{display:none;}
+
+
+.mainTitleArea{position:fixed; top:50px; left:18%; transform:translate(0,0) rotate(0); opacity:1; visibility:visible; transition:all .7s;}
+.mainTitleArea.off{opacity:0; visibility:hidden;}
+.mainTitleArea h1{font-size:8.4rem;}
+.mainTitleArea .subTitle{margin-top:0; font-size:1.4rem;}
+.mainTitleArea .subTitle span{font-weight:500;}
+.mainTitleArea .apartName{font-size:2.2rem; word-spacing:-3px; letter-spacing:-1px;}
+.mainTitleArea .dotImg{width:220px; height:24px;}
+
+
+.backBtn{width:87.5px; height:87.5px;}
+.dotBg{position:fixed; right:revert; bottom:50%; left:8%; transform:translateY(50.1%); opacity:1; visibility:visible; transition:all .7s;}
+.dotBg.off{opacity:0; visibility:hidden;}
+.dotBg img{width:55px; height:111px; transform:rotate(90deg);}
+.mainVisual{width:80%; margin-left:6%;}
+
+
+.directionInfo{position:fixed; background:url(../img/placeInfoBg.jpg) no-repeat top right/cover;}
+.directionInfo #fixCom{width:100%; height:99%; margin-left:-10em;}
+.directionInfo #rotCom{width:316px; height:316px;}
+.directionInfo #comBg{transform:translateX(-37%);}
+.directionInfo #fixCom h2{font-size:10rem;}
+.directionInfo .textArea{right:3%;}
+.directionInfo .textArea h3.title{margin-bottom:1.1em;}
+.directionInfo .textArea ul.subText li{line-height:24px; font-size:1.2rem;}
+.directionInfo .textArea .iconArea span{font-size:1.25rem;}
+
+
+.content .contItem{width:600px; margin:0 auto 380px;}
+.content .contItem .conImg{width:100%; height:430px; border-radius:0 160px 0 160px; background-size:cover; background-position:-60px;}
+.content .contItem .textArea{position:relative; top:5em; left:0;}
+}
+
+@media screen and (max-width:800px) {
+.mobileOff{display:none;}
+.mobileOn{display:block;}
+#mbMobileOff{display:none;}
+#mbMobileOn{display:block;}
+
+
+.backBtn{top:revert; left:0; bottom:0; width:100%; height:50px; background:#111; border-radius:0;}
+.backBtn a span{font-size:1.2rem; font-weight:400;}
+.mainTitleArea{position:fixed; top:11%; left:10%; transform:translate(0,0) rotate(0); opacity:1; visibility:visible; transition:all .7s;}
+.mainTitleArea.off{opacity:0; visibility:hidden;}
+.mainTitleArea h1{font-size:5.8rem; letter-spacing:0;}
+.mainTitleArea .subTitle{margin-top:0; font-size:1.2rem;}
+.mainTitleArea .apartName{font-size:1.6rem; word-spacing:-2px; letter-spacing:0;}
+.mainTitleArea .dotImg{bottom:2px; width:150px; height:16px;}
+.scrollBar{top:50vh; right:-36px; transform:translateY(-40vw) rotate(90deg); width:120px;}
+.scrollBar:before{top:10px;}
+.scrollBar:after{content:""; position:absolute; top:5px; will-change:left;}
+.scrollBar > span{font-size:1.1rem;}
+.mainVisual > div{margin:10em 0 0;}
+.mainVisual .mainImgBox img.mainTxt{top:5%; right:2%;}
+.mainVisual .logoBox{margin-top:-4em; margin-left:0;}
+
+
+.directionInfo{background:url(../img/placeInfoBg.jpg) no-repeat top right/cover;}
+.directionInfo #fixCom{bottom:-270px; width:100%; height:610px;}
+.directionInfo #rotCom{top:4px; width:224px; height:224px;}
+.directionInfo #comBg{bottom:-270px; width:260px; height:260px;}
+.directionInfo #fixCom h2{font-size:7rem;}
+.directionInfo #fixCom h2.north{transform:translate(-34px,36px);}
+.directionInfo #fixCom h2.south{transform:translate(64px,96px);}
+.directionInfo #fixCom h2.west{transform:translate(82px,-72px);}
+.directionInfo #fixCom h2.east{transform:translate(-48px,96px);}
+.directionInfo .textArea{top:10%; left:15%;}
+.directionInfo .textArea ul.subText{font-size:12px;}
+.textArea ul li{line-height:24px;}
+.iconArea span{font-size:1rem;}
+
+
+.content .contItem{width:80%;}
+.content .contItem.item03{margin-bottom:12.5em;}
+.content .contItem .conImg{width:100%; height:370px; border-radius:0 160px 0 160px; background-size:cover; background-position:0;}
+.content .contItem .textArea{position:relative; top:5em; left:0;}
+.content .contItem .textArea h3{font-size:3rem;}
+.content .contItem .textArea h3 span:nth-child(3){font-size:2.1rem;}
+.content .contItem .textArea li{font-size:1.2rem; white-space:wrap;}
+}

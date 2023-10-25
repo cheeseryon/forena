@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import url(font.css); 
+@font-face{font-family:Baskvl; src:url(../font/baskvl.ttf) format(woff);}
+html{font-size:.625rem;}
+body{font:400 1.4rem "Noto Sans KR", sans-serif; color:#333; width:100%; margin:auto;}
+body::-webkit-scrollbar{display:none;}
+#home{overflow:hidden;}
+.mobile{display:none;}
+.tabMobile{display:none;}
+
+/* mainvisual */
+.mainTitleArea{position:fixed; top:50%; left:21%; transform:translate(-50.1%,-50.1%) rotate(-90deg); z-index:20;}
+.mainTitleArea h1{font-family:Baskvl, serif; font-size:12.1rem; font-weight:300; color:#000; letter-spacing:-1px;}
+.mainTitleArea .subTitle{margin-top:1.764em; font-size:1.7rem; color:#999; word-spacing:-3px;}
+.mainTitleArea .subTitle span{font-weight:700;}
+.mainTitleArea .apartName{font-size:3.3rem; font-weight:600; color:#222; word-spacing:-5px; letter-spacing:-2px;}
+.mainTitleArea .dotImg{position:absolute; bottom:6px; right:0; display:block; width:317px; height:35px; background:url(../img/dotBg01.png) no-repeat center/cover;}
+.scrollBar{position:fixed; top:50%; right:-3%; transform:rotate(90deg); width:180px; color:#111; overflow:hidden; z-index:20;}
+.scrollBar:before{content:""; position:absolute; top:10px; left:50px; display:block; width:130px; height:1px; background:#999;}
+.scrollBar:after{content:""; position:absolute; top:5px; left:50px; display:block; width:10px; height:10px; background:#111; border-radius:50%; animation:scrollMove 2.5s infinite; will-change:left;}
+@keyframes scrollMove {
+  10%{left:50px; opacity:1;}
+  100%{left:110%;}
+}
+.scrollBar span{font-size:.8rem; font-weight:700;}
+.dotBg{position:fixed; bottom:-5%; right:6%; z-index:20;}
+.dotBg img{transform:translateZ(0); image-rendering:0; backface-visibility:hidden;}
+.mainVisual{position:fixed; display:flex; justify-content:center; align-items:center; width:100%; height:100%; visibility:hidden; opacity:0; transition:all .7s; margin:0 auto;}
+.mainVisual.on{opacity:1; visibility:visible;}
+.mainVisual > div{position:relative; margin:12em 0 0 3.8em;}
+.mainVisual .mainImgBox{position:relative;}
+.mainVisual img{transform:translateZ(0); image-rendering:0; backface-visibility:hidden;}
+.mainVisual .mainImgBox img.mainImg{max-width:100%; height:auto;}
+.mainVisual .mainImgBox img.mainTxt{position:absolute; top:14%; right:-4%; max-width:50%; height:auto;}
+.mainVisual .logoBox{position:relative; margin-top:-7em; margin-left:1em; display:flex; justify-content:center; align-items:center; width:100%;}
+.mainVisual .logoBox .icon{width:24px; height:24px; margin:0 1.3em;}
+.mainVisual .logoBox .xi{width:62px; height:32px;}
+.mainVisual .logoBox .ts{width:52px; height:45px;}
+.mainVisual .logoBox .forena{width:80px; height:13px;}
+/* mainvisual END */
+
+
+.directionInfo{position:fixed; width:100vw; height:100%; background:url(../img/placeInfoBg.jpg) no-repeat center/cover; opacity:0; visibility:hidden; transition:all .7s;}
+.directionInfo.on{visibility:visible; opacity:1;}
+.directionInfo .compass{top:0; bottom:0; left:0; right:0; margin:auto;}
+.directionInfo #fixCom{position:fixed; width:1300px; height:1000px; background:url(../img/compassBg.png) no-repeat center center/cover;}
+.directionInfo #rotCom{position:absolute; top:10px; width:372px; height:372px; background:url(../img/compass.png) no-repeat center center/cover;}
+.directionInfo #comBg{position:absolute; width:400px; height:400px; z-index:50;}
+.directionInfo #fixCom h2{position:absolute; top:0; bottom:0; left:0; right:0; width:400px; height:120px; color:#fff; font-size:11rem; font-weight:800; text-align:center; text-shadow:0 0 15px rgba(0,0,0,0.4); z-index:30; visibility:hidden; opacity:0; transition:all .1s; margin:auto;}
+.directionInfo #fixCom h2.on{visibility:visible; opacity:1; transition:all .7s .8s;}
+.directionInfo #fixCom h2.north{transform:translate(-96px,94px);}
+.directionInfo #fixCom h2.south{transform:translate(142px,174px);}
+.directionInfo #fixCom h2.west{transform:translate(100px,-146px);}
+.directionInfo #fixCom h2.east{transform:translate(-100px,94px);}
+
+.directionInfo .textArea{position:absolute; top:21%; right:0; display:block; width:35%; z-index:60; opacity:0; visibility:hidden;}
+.directionInfo .textArea.on{opacity:1; visibility:visible;}
+.directionInfo .textArea > a{display:block;}
+.directionInfo .textArea h3.title{position:relative; margin-bottom:1.25em; visibility:hidden; opacity:0; transition:all 1s; transform:translateX(50px);}
+.directionInfo .textArea h3.title.on{visibility:visible; opacity:1; transform:translateX(0);}
+.directionInfo .textArea ul.subText{position:relative; visibility:hidden; opacity:0; transition:all 1s .2s; transform:translateX(50px);}
+.directionInfo .textArea ul.subText.on{visibility:visible; opacity:1; transform:translateX(0);}
+.directionInfo .textArea .iconArea{position:relative; visibility:hidden; opacity:0; transition:all 1s .4s; transform:translateX(50px);}
+.directionInfo .textArea .iconArea.on{visibility:visible; opacity:1; transform:translateX(0);}
+
+/* -- hover시 밑줄 -- */
+.directionInfo #comBg:hover ~ .textArea h3 span:before,
+.directionInfo .textArea:hover h3 span:before,.directionInfo #comBg:hover ~ 
+.textArea ul li span:before,
+.directionInfo .textArea:hover ul li span:before{width:100%;}
+/* directionInfo END */
+
+
+.content{margin-top:5100px; opacity:0; visibility:hidden; transition:all .7s;}
+.content.on{opacity:1; visibility:visible;}
+.content .contItem{position:relative; margin:0 auto 23.75em;}
+.content .contItem .conImg{position:relative; display:block; width:430px; height:652px; overflow:hidden; border-radius:160px 0 160px 0; box-shadow:inset 3px 3px 20px rgba(0,0,0,0.5); background-size:none; z-index:20; margin:0 auto;}
+.content .contItem .textArea{position:absolute; top:6%; left:68%; z-index:20;}
+.content .item01 .conImg{background:url(../img/conItem01.jpg) no-repeat -486px 0;}
+.content .item02 .conImg{background:url(../img/conItem02.jpg) no-repeat 0 0;}
+.content .item03 .conImg{background:url(../img/conItem03.jpg) no-repeat -130px 0;}
+.content .contItem .textArea h3{position:relative; top:0; left:-4px; font-family:"Nanum Myeongjo", serif; font-size:4rem; font-weight:400; color:#000; margin-bottom:1.25em;}
+.content .contItem .textArea h3 span:nth-child(3){font-size:28px;}
+.content .contItem .textArea li{color:#6b6b6b;}
+
+/* -- hover시 밑줄 -- */
+.content .contItem .conImg:hover + .textArea h3 span:before,
+.content .contItem .textArea:hover h3 span:before,.content .contItem .conImg:hover + 
+.textArea li span:before,
+.content .contItem .textArea:hover li span:before{width:100%;}
+
+.textArea span{position:relative; display:inline-block;}
+.textArea span:before{content:""; position:absolute; bottom:0; left:0; width:0; height:1px; background:#666; transition:width 1s;}
+.textArea ul li{white-space:nowrap; line-height:30px;}
+.iconArea{margin-top:4em; color:#101010;}
+.iconArea span{top:-4px; margin-left:.5em; font-size:1.2rem;}
+.iconArea span:before{width:100%; height:1px;}
+/* content END */
