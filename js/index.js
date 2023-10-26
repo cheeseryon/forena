@@ -1,20 +1,20 @@
 let mainVisual = document.querySelector(".mainVisual"),
-  directionInfo = document.querySelector(".directionInfo"),
-  content = document.querySelector(".content"),
-  rotCom = document.querySelector("#rotCom");
+    directionInfo = document.querySelector(".directionInfo"),
+    content = document.querySelector(".content"),
+    rotCom = document.querySelector("#rotCom");
 
 let textArea = document.querySelectorAll(".directionInfo .textArea"),
-  directionTitle = document.querySelectorAll(".directionInfo h2"),
-  textTilte = document.querySelectorAll(".directionInfo .textArea .title"),
-  subText = document.querySelectorAll(".directionInfo .textArea .subText"),
-  iconArea = document.querySelectorAll(".directionInfo .textArea .iconArea");
+    directionTitle = document.querySelectorAll(".directionInfo h2"),
+    textTilte = document.querySelectorAll(".directionInfo .textArea .title"),
+    subText = document.querySelectorAll(".directionInfo .textArea .subText"),
+    iconArea = document.querySelectorAll(".directionInfo .textArea .iconArea");
 
 let mainTitleArea = document.querySelector(".mainTitleArea"),
-  dotBg = document.querySelector(".dotBg");
+    dotBg = document.querySelector(".dotBg");
 
 window.addEventListener("scroll", () => {
   let scrollY = Math.floor(this.scrollY),
-    comRotate = Math.floor(scrollY / 10);
+      comRotate = Math.floor(scrollY / 10);
 
   rotCom.style.transform = "rotate(" + comRotate + "deg)";
 
@@ -32,14 +32,13 @@ window.addEventListener("scroll", () => {
     content.classList.add("on");
   }
 
-  // main 모바일,태블릿 스크롤이벤트시 숨김처리
+  //  viewport 모바일,태블릿 일 경우 스크롤 이벤트시 숨김처리
   if (300 < scrollY) {
     mainTitleArea.classList.add("off");
     dotBg.classList.add("off");
   } else {
     mainTitleArea.classList.remove("off");
   }
-  // 
   
 
   if (300 < scrollY && scrollY <= 1300) {
@@ -98,10 +97,3 @@ window.addEventListener("scroll", () => {
     iconArea[3].classList.remove("on");
   }
 });
-
-/* 
-window.onload = function () {
-  setTimeout(function () {
-    scrollTo(0, 0);
-  });
-}; */

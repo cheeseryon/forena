@@ -40,11 +40,11 @@ function subPageFadeIn() {
 
 // magazine01 페이지 scrollBar의 컬러 변경 이벤트
 function scrollBarColorChange () {
+    let scrollY = Math.floor(this.scrollY)
     let scrollBar = document.querySelector('.scrollBar');
 
-    let scrollY = Math.floor(this.scrollY)
-    let scrollTrans = fadeInClass[0].clientHeight - scrollY
-    if(scrollY > scrollTrans){
+    let scrollBarChangePoint = fadeInClass[0].clientHeight - scrollY
+    if(scrollY > scrollBarChangePoint){
         scrollBar.classList.remove('on')
     } else {
         scrollBar.classList.add('on')
