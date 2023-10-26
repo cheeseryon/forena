@@ -79,7 +79,7 @@ body::-webkit-scrollbar{display:none;}
 .content .item01 .conImg{background:url(../img/conItem01.jpg) no-repeat -486px 0;}
 .content .item02 .conImg{background:url(../img/conItem02.jpg) no-repeat 0 0;}
 .content .item03 .conImg{background:url(../img/conItem03.jpg) no-repeat -130px 0;}
-.content .contItem .textArea h3{position:relative; top:0; left:-4px; font-family:"Nanum Myeongjo", serif; font-size:4rem; font-weight:400; color:#000; margin-bottom:1.25em;}
+.content .contItem .textArea h3{position:relative; top:0; left:-4px; line-height: 1.5;font-family:"Nanum Myeongjo", serif; font-size:4rem; font-weight:400; color:#000; margin-bottom:1.25em;}
 .content .contItem .textArea h3 span:nth-child(3){font-size:28px;}
 .content .contItem .textArea li{color:#6b6b6b;}
 

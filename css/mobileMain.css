@@ -1,10 +1,9 @@
 @charset "utf-8";
 @import url(font.css); 
-@font-face{font-family:Baskvl; src:url(../font/baskvl.ttf) format(woff);}
+@font-face {font-family:Baskvl; src:url(../font/baskvl.ttf) format(woff);}
 
 @media screen and (min-width:801px) and (max-width:1250px) {
 .mobileOn{display:none;}
-
 
 .mainTitleArea{position:fixed; top:50px; left:18%; transform:translate(0,0) rotate(0); opacity:1; visibility:visible; transition:all .7s;}
 .mainTitleArea.off{opacity:0; visibility:hidden;}
@@ -33,17 +32,16 @@
 .directionInfo .textArea .iconArea span{font-size:1.25rem;}
 
 
-.content .contItem{width:600px; margin:0 auto 380px;}
+.content .contItem{width:600px; margin:0 auto 18em;}
 .content .contItem .conImg{width:100%; height:430px; border-radius:0 160px 0 160px; background-size:cover; background-position:-60px;}
 .content .contItem .textArea{position:relative; top:5em; left:0;}
 }
 
 @media screen and (max-width:800px) {
+.webTab{display:none;}
 .mobileOff{display:none;}
-.mobileOn{display:block;}
-#mbMobileOff{display:none;}
-#mbMobileOn{display:block;}
 
+.mobile{display:block;}
 
 .backBtn{top:revert; left:0; bottom:0; width:100%; height:50px; background:#111; border-radius:0;}
 .backBtn a span{font-size:1.2rem; font-weight:400;}
