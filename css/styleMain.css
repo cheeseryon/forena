@@ -2,7 +2,7 @@
 @import url(font.css); 
 @font-face{font-family:Baskvl; src:url(../font/baskvl.ttf) format(woff);}
 html{font-size:.625rem;}
-body{font:400 1.4rem "Noto Sans KR", sans-serif; color:#333; width:100%; margin:auto;}
+body{font:400 1.6rem "Noto Sans KR", sans-serif; color:#333; width:100%; margin:auto;}
 body::-webkit-scrollbar{display:none;}
 #home{overflow:hidden;}
 .mobile{display:none;}
@@ -60,6 +60,7 @@ body::-webkit-scrollbar{display:none;}
 .directionInfo .textArea h3.title.on{visibility:visible; opacity:1; transform:translateX(0);}
 .directionInfo .textArea ul.subText{position:relative; visibility:hidden; opacity:0; transition:all 1s .2s; transform:translateX(50px);}
 .directionInfo .textArea ul.subText.on{visibility:visible; opacity:1; transform:translateX(0);}
+.directionInfo .textArea ul li {font-size: 1.8rem;}
 .directionInfo .textArea .iconArea{position:relative; visibility:hidden; opacity:0; transition:all 1s .4s; transform:translateX(50px);}
 .directionInfo .textArea .iconArea.on{visibility:visible; opacity:1; transform:translateX(0);}
 

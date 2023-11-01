@@ -3,9 +3,12 @@
 @font-face {font-family:Baskvl; src:url(../font/baskvl.ttf) format(woff);}
 
 @media screen and (min-width:801px) and (max-width:1250px) {
+.web{display:none;}
+.mobileTab{display:block;}
+
 .mobileOn{display:none;}
 
-.mainTitleArea{position:fixed; top:50px; left:18%; transform:translate(0,0) rotate(0); opacity:1; visibility:visible; transition:all .7s;}
+.mainTitleArea{position:fixed; top:50px; left:18%; transform:translate(0,0) rotate(0); opacity:1; visibility:visible; transition:all .7s; margin-bottom:2em ;}
 .mainTitleArea.off{opacity:0; visibility:hidden;}
 .mainTitleArea h1{font-size:8.4rem;}
 .mainTitleArea .subTitle{margin-top:0; font-size:1.4rem;}
@@ -26,22 +29,23 @@
 .directionInfo #rotCom{width:316px; height:316px;}
 .directionInfo #comBg{transform:translateX(-37%);}
 .directionInfo #fixCom h2{font-size:10rem;}
-.directionInfo .textArea{right:3%;}
+.directionInfo .textArea{right:5%;}
 .directionInfo .textArea h3.title{margin-bottom:1.1em;}
-.directionInfo .textArea ul.subText li{line-height:24px; font-size:1.2rem;}
-.directionInfo .textArea .iconArea span{font-size:1.25rem;}
+.directionInfo .textArea ul.subText li{line-height:30px; font-size:1.7rem;}
+.directionInfo .textArea .iconArea span{font-size:1.3rem;}
 
 
-.content .contItem{width:600px; margin:0 auto 18em;}
+.content .contItem{width:600px; margin:0 auto 20em;}
 .content .contItem .conImg{width:100%; height:430px; border-radius:0 160px 0 160px; background-size:cover; background-position:-60px;}
 .content .contItem .textArea{position:relative; top:5em; left:0;}
+.content .contItem .textArea li{white-space:wrap;}
 }
 
 @media screen and (max-width:800px) {
-.webTab{display:none;}
-.mobileOff{display:none;}
+.web{display:none;}
+.mobileTab{display:block;}
 
-.mobile{display:block;}
+.mobileOff{display:none;}
 
 .backBtn{top:revert; left:0; bottom:0; width:100%; height:50px; background:#111; border-radius:0;}
 .backBtn a span{font-size:1.2rem; font-weight:400;}
@@ -70,16 +74,16 @@
 .directionInfo #fixCom h2.west{transform:translate(82px,-72px);}
 .directionInfo #fixCom h2.east{transform:translate(-48px,96px);}
 .directionInfo .textArea{top:10%; left:15%;}
-.directionInfo .textArea ul.subText{font-size:12px;}
-.textArea ul li{line-height:24px;}
+.directionInfo .textArea ul li {font-size: 1.6rem;}
+.textArea ul li{line-height:28px;}
 .iconArea span{font-size:1rem;}
 
 
-.content .contItem{width:80%;}
+.content .contItem{width:80%; margin:0 auto 15em;}
 .content .contItem.item03{margin-bottom:12.5em;}
 .content .contItem .conImg{width:100%; height:370px; border-radius:0 160px 0 160px; background-size:cover; background-position:0;}
 .content .contItem .textArea{position:relative; top:5em; left:0;}
 .content .contItem .textArea h3{font-size:3rem;}
 .content .contItem .textArea h3 span:nth-child(3){font-size:2.1rem;}
-.content .contItem .textArea li{font-size:1.2rem; white-space:wrap;}
+.content .contItem .textArea li{font-size:1.4rem; white-space:wrap;}
 }
