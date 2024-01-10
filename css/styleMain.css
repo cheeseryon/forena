@@ -4,7 +4,7 @@
 html{font-size:.625rem;}
 body{font:400 1.6rem "Noto Sans KR", sans-serif; color:#333; width:100%; margin:auto;}
 body::-webkit-scrollbar{display:none;}
-#home{overflow:hidden;}
+main{overflow:hidden;}
 .mobile{display:none;}
 .tabMobile{display:none;}
 
