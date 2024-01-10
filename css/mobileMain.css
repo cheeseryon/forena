@@ -8,7 +8,7 @@
 
 .mobileOn{display:none;}
 
-.mainTitleArea{position:fixed; top:50px; left:18%; transform:translate(0,0) rotate(0); opacity:1; visibility:visible; transition:all .7s; margin-bottom:2em ;}
+.mainTitleArea{position:fixed; top:50px; left:8%; transform:translate(0,0) rotate(0); opacity:1; visibility:visible; transition:all .7s; margin-bottom:2em ;}
 .mainTitleArea.off{opacity:0; visibility:hidden;}
 .mainTitleArea h1{font-size:8.4rem;}
 .mainTitleArea .subTitle{margin-top:0; font-size:1.4rem;}
@@ -22,16 +22,16 @@
 .dotBg.off{opacity:0; visibility:hidden;}
 .dotBg img{width:55px; height:111px; transform:rotate(90deg);}
 .mainVisual{width:80%; margin-left:6%;}
-
+.mainVisual .logoBox {margin-top:-5em;}
 
 .directionInfo{position:fixed; background:url(../img/placeInfoBg.jpg) no-repeat top right/cover;}
-.directionInfo #fixCom{width:100%; height:99%; margin-left:-10em;}
+.directionInfo #fixCom{width:100%; height:75%; margin-left:-10em;}
 .directionInfo #rotCom{width:316px; height:316px;}
 .directionInfo #comBg{transform:translateX(-37%);}
 .directionInfo #fixCom h2{font-size:10rem;}
-.directionInfo .textArea{right:5%;}
+.directionInfo .textArea{right:12.5%;}
 .directionInfo .textArea h3.title{margin-bottom:1.1em;}
-.directionInfo .textArea ul.subText li{line-height:30px; font-size:1.7rem;}
+.directionInfo .textArea ul.subText li{line-height:30px; font-size:1.6rem;}
 .directionInfo .textArea .iconArea span{font-size:1.3rem;}
 
 
@@ -43,9 +43,9 @@
 
 @media screen and (max-width:800px) {
 .web{display:none;}
-.mobileTab{display:block;}
+.webTab{display:none;}
 
-.mobileOff{display:none;}
+.mobile{display:block;}
 
 .backBtn{top:revert; left:0; bottom:0; width:100%; height:50px; background:#111; border-radius:0;}
 .backBtn a span{font-size:1.2rem; font-weight:400;}
@@ -59,10 +59,11 @@
 .scrollBar:before{top:10px;}
 .scrollBar:after{content:""; position:absolute; top:5px; will-change:left;}
 .scrollBar > span{font-size:1.1rem;}
+
 .mainVisual > div{margin:10em 0 0;}
 .mainVisual .mainImgBox img.mainTxt{top:5%; right:2%;}
-.mainVisual .logoBox{margin-top:-4em; margin-left:0;}
-
+.mainVisual .logoBox{margin-top:-4em; margin-left:10px;}
+.mainVisual .logoBox .icon{width: 18px; height: 18px; margin: 0.625em;}
 
 .directionInfo{background:url(../img/placeInfoBg.jpg) no-repeat top right/cover;}
 .directionInfo #fixCom{bottom:-270px; width:100%; height:610px;}

@@ -7,6 +7,7 @@ body::-webkit-scrollbar{display:none;}
 main{overflow:hidden;}
 .mobile{display:none;}
 .tabMobile{display:none;}
+.marginBottomElem {margin-bottom: 2em;}
 
 /* mainvisual */
 .mainTitleArea{position:fixed; top:50%; left:21%; transform:translate(-50.1%,-50.1%) rotate(-90deg); z-index:20;}
@@ -29,7 +30,7 @@ main{overflow:hidden;}
 .mainVisual.on{opacity:1; visibility:visible;}
 .mainVisual > div{position:relative; margin:12em 0 0 3.8em;}
 .mainVisual .mainImgBox{position:relative;}
-.mainVisual img{transform:translateZ(0); image-rendering:0; backface-visibility:hidden;}
+/* .mainVisual img{transform:translateZ(0); image-rendering:0; backface-visibility:hidden;} */
 .mainVisual .mainImgBox img.mainImg{max-width:100%; height:auto;}
 .mainVisual .mainImgBox img.mainTxt{position:absolute; top:14%; right:-4%; max-width:50%; height:auto;}
 .mainVisual .logoBox{position:relative; margin-top:-7em; margin-left:1em; display:flex; justify-content:center; align-items:center; width:100%;}

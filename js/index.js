@@ -5,7 +5,7 @@ let mainVisual = document.querySelector(".mainVisual"),
 
 let textArea = document.querySelectorAll(".directionInfo .textArea"),
     directionTitle = document.querySelectorAll(".directionInfo h2"),
-    textTilte = document.querySelectorAll(".directionInfo .textArea .title"),
+    textTitle = document.querySelectorAll(".directionInfo .textArea .title"),
     subText = document.querySelectorAll(".directionInfo .textArea .subText"),
     iconArea = document.querySelectorAll(".directionInfo .textArea .iconArea");
 
@@ -38,19 +38,20 @@ window.addEventListener("scroll", () => {
     dotBg.classList.add("off");
   } else {
     mainTitleArea.classList.remove("off");
+    dotBg.classList.remove("off");
   }
   
 
   if (300 < scrollY && scrollY <= 1300) {
     textArea[0].classList.add("on");
     directionTitle[0].classList.add("on");
-    textTilte[0].classList.add("on");
+    textTitle[0].classList.add("on");
     subText[0].classList.add("on");
     iconArea[0].classList.add("on");
   } else {
     textArea[0].classList.remove("on");
     directionTitle[0].classList.remove("on");
-    textTilte[0].classList.remove("on");
+    textTitle[0].classList.remove("on");
     subText[0].classList.remove("on");
     iconArea[0].classList.remove("on");
   }
@@ -58,13 +59,13 @@ window.addEventListener("scroll", () => {
   if (1300 < scrollY && scrollY <= 2300) {
     textArea[1].classList.add("on");
     directionTitle[1].classList.add("on");
-    textTilte[1].classList.add("on");
+    textTitle[1].classList.add("on");
     subText[1].classList.add("on");
     iconArea[1].classList.add("on");
   } else {
     textArea[1].classList.remove("on");
     directionTitle[1].classList.remove("on");
-    textTilte[1].classList.remove("on");
+    textTitle[1].classList.remove("on");
     subText[1].classList.remove("on");
     iconArea[1].classList.remove("on");
   }
@@ -72,13 +73,13 @@ window.addEventListener("scroll", () => {
   if (2300 < scrollY && scrollY <= 3300) {
     textArea[2].classList.add("on");
     directionTitle[2].classList.add("on");
-    textTilte[2].classList.add("on");
+    textTitle[2].classList.add("on");
     subText[2].classList.add("on");
     iconArea[2].classList.add("on");
   } else {
     textArea[2].classList.remove("on");
     directionTitle[2].classList.remove("on");
-    textTilte[2].classList.remove("on");
+    textTitle[2].classList.remove("on");
     subText[2].classList.remove("on");
     iconArea[2].classList.remove("on");
   }
@@ -86,13 +87,13 @@ window.addEventListener("scroll", () => {
   if (3300 < scrollY && scrollY <= 4300) {
     textArea[3].classList.add("on");
     directionTitle[3].classList.add("on");
-    textTilte[3].classList.add("on");
+    textTitle[3].classList.add("on");
     subText[3].classList.add("on");
     iconArea[3].classList.add("on");
   } else {
     textArea[3].classList.remove("on");
     directionTitle[3].classList.remove("on");
-    textTilte[3].classList.remove("on");
+    textTitle[3].classList.remove("on");
     subText[3].classList.remove("on");
     iconArea[3].classList.remove("on");
   }
