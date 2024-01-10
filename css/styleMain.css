@@ -9,7 +9,7 @@ main{overflow:hidden;}
 .tabMobile{display:none;}
 .marginBottomElem {margin-bottom: 2em;}
 
-/* mainvisual */
+/* mainVisual */
 .mainTitleArea{position:fixed; top:50%; left:21%; transform:translate(-50.1%,-50.1%) rotate(-90deg); z-index:20;}
 .mainTitleArea h1{font-family:Baskvl, serif; font-size:12.1rem; font-weight:300; color:#000; letter-spacing:-1px;}
 .mainTitleArea .subTitle{margin-top:1.764em; font-size:1.7rem; color:#999; word-spacing:-3px;}
@@ -38,7 +38,7 @@ main{overflow:hidden;}
 .mainVisual .logoBox .xi{width:62px; height:32px;}
 .mainVisual .logoBox .ts{width:52px; height:45px;}
 .mainVisual .logoBox .forena{width:80px; height:13px;}
-/* mainvisual END */
+/* mainVisual END */
 
 
 .directionInfo{position:fixed; width:100vw; height:100%; background:url(../img/placeInfoBg.jpg) no-repeat center/cover; opacity:0; visibility:hidden; transition:all .7s;}
@@ -49,12 +49,16 @@ main{overflow:hidden;}
 .directionInfo #comBg{position:absolute; width:400px; height:400px; z-index:50;}
 .directionInfo #fixCom h2{position:absolute; top:0; bottom:0; left:0; right:0; width:400px; height:120px; color:#fff; font-size:11rem; font-weight:800; text-align:center; text-shadow:0 0 15px rgba(0,0,0,0.4); z-index:30; visibility:hidden; opacity:0; transition:all .1s; margin:auto;}
 .directionInfo #fixCom h2.on{visibility:visible; opacity:1; transition:all .7s .8s;}
-.directionInfo #fixCom h2.north{transform:translate(-96px,94px);}
+.directionInfo #fixCom h2.north{transform:translate(-60px,94px);}
 .directionInfo #fixCom h2.south{transform:translate(142px,174px);}
 .directionInfo #fixCom h2.west{transform:translate(100px,-146px);}
 .directionInfo #fixCom h2.east{transform:translate(-100px,94px);}
 
-.directionInfo .textArea{position:absolute; top:21%; right:0; display:block; width:35%; z-index:60; opacity:0; visibility:hidden;}
+
+.directionInfo section {position:absolute; top:21%; left:67%; display:block; width: 25%; max-width: 440px;}
+
+
+.directionInfo .textArea{position: relative; display: block; z-index:60; opacity:0; visibility:hidden;}
 .directionInfo .textArea.on{opacity:1; visibility:visible;}
 .directionInfo .textArea > a{display:block;}
 .directionInfo .textArea h3.title{position:relative; margin-bottom:1.25em; visibility:hidden; opacity:0; transition:all 1s; transform:translateX(50px);}
