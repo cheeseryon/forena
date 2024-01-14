@@ -80,9 +80,9 @@ main{overflow:hidden;}
 .content{margin-top:5100px; opacity:0; visibility:hidden; transition:all .7s;}
 .content.on{opacity:1; visibility:visible;}
 .content .contItem{position:relative; margin:0 auto 23.75em;}
-.content .contItem .conImg{position:relative; display:block; width:430px; height:652px; overflow:hidden; border-radius:160px 0 160px 0; box-shadow:inset 3px 3px 20px rgba(0,0,0,0.5); background-size:none; z-index:20; margin:0 auto;}
+.content .contItem .conImg{position:relative; display:block; width:430px; height:652px; overflow:hidden; border-radius:160px 0 160px 0; box-shadow:inset 3px 3px 20px rgba(0,0,0,0.5); background-size:unset; z-index:20; margin:0 auto;}
 .content .contItem .textArea{position:absolute; top:6%; left:68%; z-index:20;}
-.content .item01 .conImg{background:url(../img/conItem01.jpg) no-repeat -486px 0;}
+.content .item01 .conImg{background:url(../img/conItem01.jpg) no-repeat -400px 0}
 .content .item02 .conImg{background:url(../img/conItem02.jpg) no-repeat 0 0;}
 .content .item03 .conImg{background:url(../img/conItem03.jpg) no-repeat -130px 0;}
 .content .contItem .textArea h3{position:relative; top:0; left:-4px; line-height: 1.5;font-family:"Nanum Myeongjo", serif; font-size:4rem; font-weight:400; color:#000; margin-bottom:1.25em;}
