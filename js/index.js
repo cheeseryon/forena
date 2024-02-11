@@ -16,7 +16,8 @@ window.addEventListener("scroll", () => {
   let scrollY = Math.floor(this.scrollY),
       comRotate = Math.floor(scrollY / 10);
 
-  rotCom.style.transform = "rotate(" + comRotate + "deg)";
+  if(rotCom) {
+    rotCom.style.transform = "rotate(" + comRotate + "deg)";
 
   if (300 > scrollY) {
     mainVisual.classList.add("on");
@@ -97,4 +98,109 @@ window.addEventListener("scroll", () => {
     subText[3].classList.remove("on");
     iconArea[3].classList.remove("on");
   }
+  }
+  
 });
+
+
+function mainPageScrollYSave () {
+  let subPageLink = Array.from(document.querySelectorAll(".subPageLink"))
+
+  subPageLink.forEach((item) => {
+      item.addEventListener("click" , function(e) {
+        e.preventDefault()
+        sessionStorage.setItem('mainPageScrollY', window.scrollY);
+
+        window.location.href = item.getAttribute("href")
+      })
+  })
+} 
+mainPageScrollYSave()
+
+
+
+/* 서브페이지 */
+let fadeInClass;
+let heightTop = [];
+let heightBottom = [];
+let fadePointTop = [];
+let fadePointBottom = [];
+let windowHeight = Math.floor(window.innerHeight)
+let mainImgBox = document.querySelector('.mainImgBox');
+let titleArea = document.querySelector('.titleArea');
+
+function subPageFadeIn() {    
+    let scrollY = Math.floor(this.scrollY)
+
+    if (window.matchMedia("(min-width: 801px)").matches && document.querySelector('.fadeInWebTab')) {          
+        fadeInClass = Array.from(document.querySelectorAll('.fadeInWebTab'));
+    } else if (window.matchMedia("(max-width: 800px)").matches && document.querySelector('.fadeInMobile')) { 
+        fadeInClass = Array.from(document.querySelectorAll('.fadeInMobile'));
+    }
+
+  if(fadeInClass !== undefined) {
+    for(let i = 0; i < fadeInClass.length; i++) {   
+        heightTop[i] = Math.floor(fadeInClass[i].getBoundingClientRect().top)
+        heightBottom[i] = Math.floor(fadeInClass[i].getBoundingClientRect().bottom)
+        fadePointTop[i] = Math.floor(heightTop[i] + scrollY - windowHeight)
+        fadePointBottom[i] = Math.floor(heightBottom[i] * 0.9 + scrollY)
+
+        if(fadePointTop[i] <= scrollY && scrollY < fadePointBottom[i]) {
+            fadeInClass[i].classList.add('on')
+
+            if(fadeInClass[0].classList.contains('on')){
+                mainImgBox.classList.add('on')
+                titleArea.classList.add('on')
+            }
+
+            /* 모든 요소에 on 클래스가 붙은 경우 스크롤 이벤트 종료 */
+            if(fadeInClass.every(item => item.classList.contains('on'))) {
+                return
+            }
+        }
+      }
+  }
+}
+
+// magazine01 페이지 scrollBar의 컬러 변경 이벤트
+function scrollBarColorChange () {
+    let scrollY = Math.floor(this.scrollY)
+    let scrollBar = document.querySelector('.scrollBar');
+
+    if(fadeInClass !== undefined) {
+      let scrollBarChangePoint = fadeInClass[0].clientHeight - scrollY
+      if(scrollY > scrollBarChangePoint){
+          scrollBar.classList.remove('on')
+      } else {
+          scrollBar.classList.add('on')
+      }
+    }
+}
+
+let backBtn = Array.from(document.querySelectorAll(".backBtn > a"))
+
+backBtn.forEach((item) => {
+  item.addEventListener("click",function(e) {
+    e.preventDefault()
+
+    window.history.back()
+
+    window.addEventListener('load', () => {
+      let mainScrollY = parseInt(sessionStorage.getItem("mainPageScrollY"))
+      window.scrollTo(0, mainScrollY);
+    })
+  })
+})
+
+window.addEventListener('load', () => {
+  subPageFadeIn()
+  scrollBarColorChange()
+})
+window.addEventListener('scroll', () => {
+  subPageFadeIn()
+  scrollBarColorChange()
+})
+window.addEventListener('resize', () => {
+  subPageFadeIn()
+  scrollBarColorChange()
+})
